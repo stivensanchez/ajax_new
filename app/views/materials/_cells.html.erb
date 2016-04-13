@@ -1,0 +1,4 @@
+<td><%= i.name %></td>
+<td><%= i.description %></td>
+<td><%= link_to 'Editar', edit_house_material_path(@house, i), remote: true %></td>
+<td><%= link_to 'Eliminar', edit_house_material_path(@house, i), method: :delete, data: {comfirm: 'Esta Seguro'}, remote: true %></td>

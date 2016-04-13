@@ -10,5 +10,26 @@
   <%= @house.descripcion %>
 </p>
 
+<br>
+
+<%= link_to 'Agregar Material', new_house_material_path(@house), remote: true %>
+
+<br>
+
+<div id="form-material" hidden ></div>
+
+<table>
+	<thead>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th></th>
+	</thead>
+	<tbody id="materials">
+			<% @house.materials.each do |i| %>
+				<%= render '/materials/rows', i: i %>
+			<% end %>
+	</tbody>
+</table>
+
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
