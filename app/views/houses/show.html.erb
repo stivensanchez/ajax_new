@@ -18,7 +18,7 @@
 
 <div id="form-material" hidden ></div>
 
-<table>
+<table class="table table-bordered">
 	<thead>
 			<th>Nombre</th>
 			<th>Descripcion</th>
@@ -33,3 +33,4 @@
 
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
+<%= link_to 'Generar PDF', {:action => "show", :format => "pdf"}%>

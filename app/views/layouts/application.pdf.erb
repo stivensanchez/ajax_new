@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Houses</title>
+	<%= wicked_pdf_stylesheet_link_tag "pdf" %>
+	<%= wicked_pdf_javascript_include_tag 'application' %>
+  <meta charset="UTF-8">
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<%= yield %>	
+</body>
+</html>

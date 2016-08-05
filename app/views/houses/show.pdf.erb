@@ -1,0 +1,33 @@
+<h1><center>Descripcion/Información</center></h1>
+<hr>
+
+<p>
+	<b>nombre:</b>
+	<%= @house.nombre %>
+</p>
+
+<p>
+	<b>Descripcion:</b>
+	<%= @house.descripcion %>
+</p><br>
+
+<h3>Materiales</h3>
+<hr>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th><center>Nombre</center></th>
+			<th><center>Descripción</center></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @house.materials.each do |material| %>
+			<tr>
+				<td><%= material.name %></td>
+				<td><%= material.description %></td>
+			</tr>	
+		<% end %>
+	</tbody>
+</table>
+

@@ -10,6 +10,15 @@ class HousesController < ApplicationController
   # GET /houses/1
   # GET /houses/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf do 
+        render pdf: @house.nombre.to_s,
+        layout: 'layouts/application.pdf.erb',
+        show_as_html: params[:debug].present?
+      end   
+    end
   end
 
   # GET /houses/new
